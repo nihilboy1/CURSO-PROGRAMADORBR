@@ -1,0 +1,160 @@
+CSS INLINE (Style aberto dentro da tag) # Prioridade máxima
+Para CSS-inline, abrese um atributo "style" dentro da tag de abertura
+<h1 style="color: aqua;"></h1>
+
+CSS INTERNO (tag style aberta dentro da tag head) # Prioridade média
+<head>
+    <style>
+        h1 {
+            background-color: black;
+        }
+    </style>
+</head>
+
+CSS EXTERNO (link para o arquivo .css dentro da tag head) # Prioridade minima
+<link rel="stylesheet" href="style.css">
+
+REGAS CSS
+@charset "UTF-8"; = Para setar o tipo de teclado do nosso projeto
+@import = Para importar fontes da web
+@font-face = Para inserir fontes otf, ou ttf
+@media screen and (max-width: 400px) {aqui dentro vem o css novo, relativo ao tamanho da nova tela. MOBILE FIRST}
+
+
+
+BOX MODEL
+Toda box tem Content, Border, Margin, Width Height
+Entre o Content e a Border é possivel ter o Padding
+Entre a Border e a Margin, é possivel ter o Outline
+TIPOS DE CAIXAS
+Inline-level = Boxes que não quebram linhas e tem a largura referente ao conteudo
+<span></span>
+<a href=""></a>
+<code></code>
+<input type="text">
+<select name="" id=""></select>
+Box-level = Boxes que quebram linha e que tem a largura em 100%
+<header></header>
+<nav></nav>
+<article></article>
+<aside></aside>
+<form action=""></form>
+
+
+
+
+
+
+
+                                                    Parâmetros CSS
+
+                                                        CORES
+SITE DA ADOBE PRA GERAR PALETAS DE CORES
+https://color.adobe.com/pt/create/color-wheel
+
+SITE PALETTON PARA GERAR PALETAS E TESTAR EM SITES
+https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
+
+
+SITE COOLORS. OUTRO GERADOR DE PALETAS
+https://coolors.co/0c0910-edebd7-8b635c-296eb4-6689a1
+"color:" = Muda a cor da letra
+"background-color:" = Muda a cor do fundo
+
+                                                        FONTES E TEXTO
+
+FONTS NINJA PARA RECONHECER FONTES DE UMA PÁGINA WEB
+https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh
+
+ENCONTRANDO FONTES A PARTIR DE UMA IMAGEM 
+https://www.whatfontis.com/
+
+"font-family:" = Muda o tipo da fonte / É recomendavel usar mais de um tipo de fontes nessa declaração, para evitar bugs
+"font-size:" = Muda o tamanho da fonte  
+/ Medidas absolutas: cm, mm, in, px, pt, pc
+/ Medidas relativas: em, ex, rem, vw, vh, %
+É recomendavel usar apenas o "em" para definir o tamanho das fontes
+"font-weight" - Refere-se ao peso da fonte. Níveis de negrito, basicamente
+"font-style" - Coloca em itálico
+"text-decoration:" Sublinha o texto, entre outras coisas
+Ordem de shorthand das fontes: font-style -> font-weight -> font-size -> font-family // chama-se com: "font: args"
+"text-align:" = Muda o alinhamento horizontal
+"text-indent:" = Identa o texto
+
+                                                        IMAGENS
+background-image: url(imagens/wallpaper002.jpg); = coloca uma imagem de fundo
+background-size: cover; = centraliza a imagem e faz ela esticar
+height: 100vh;  = usando no body pra ele se estendr para o tamanho certo da tela
+background-repeat: = sobre a repeticação da imagem de fundo
+background-position: = sobre o local da tela onde a imagem de fundo vai ser "pregada"  
+background-attachment: = sobre o que vai acontecer com a imagem qando o conteudo for maior que ela. 
+com o paramentro fixed, ela fica parada e o conteudo é que se mexe      
+Ordem de shorthand do background: backgroud color, url, position, repeat, {size} attachment
+{O size está tendo que ser aplicado por fora, ainda n ta funcionando no shorthand}                                       
+
+
+
+                                                        ALINHAMENTO E TELA
+"padding:" = Define a distância entre o conteudo e a borda do bloco
+"margin" = Define as distâncias das bordas de um bloco pro outro
+"border-radius" = Define o quão pontuda vai ser a borda
+"box-shadow" = Manipula a sombra na box. Ele recebe 4 argumentos: Pro lado, pra baixo, espalhamento e cor
+"display" = Mostra e esconde caixas, troca o tipo das caixas (inline e block)
+"border:" = mexe na borda do bloco, recebendo em ordem: px, grossura, cor
+"height:" = altura do bloco
+"width:" = largura do bloco
+max-width: = o tamanho máximo que aquele bloco pode chegar
+min-width: = o tamanho minimo que aquele bloco pode chegar
+Ordem de shorthand Border e Outline: px, style, color
+Ordem de shorthand Padding e Margin: top, right, bottom, left
+position: relative ou absolute. se for absolute, eu consigo usar as funções left, top, right e bottom pra mexer a caixa
+transform: translate(-50%, -50%) = troca o centro de alinhamento de uma caixa. por exemplo, fazendo com que seja considerado o meio como centro. 
+geralmente é considirada a ponta superior esquerda
+
+
+                                                            HERANÇA
+Dessa forma, P torna-se filha da DIV                                                        
+div > p
+
+                                                        PSEUDO-CLASSES
+Pseudo classes são "estados padrão" para um determinado elemento. E quando esse estado for True, algo acontece
+:hover = Aplica-se quando se passa o mouse por cima de um elemento
+:visited = aplica-se a links ja visitados
+:active = Aplica-se quando algo for ativado, ou clicado
+:root = crio variaveis dentro do código css, por exemplo --cor0: #c5ebd6;
+:nth-child(2n) = aplica o efeito pulando elementos. nesse caso, de 2 em 2
+
+                                                        PSEUDO-ELEMENTOS
+Pseudo elementos são elementos "padrão", a serem adicionados antes ou depois de um elemento real
+::after = adiciona algo depois da tag ou do id ou classe
+::before = adiciona algo antes da tag ou do id ou classe
+
+                                                        TABELAS
+vertical-align: = Muda o alinhamento vertical em tabelas
+<table></table> = tag geral da tabela
+<caption></caption> titulo/legenda da tabela
+<thead></thead> = elementos da cabeça da tabela
+<tbody></tbody> = elementos do corpo da tabela
+<tfoot></tfoot> = elementos do rodapé da tabela
+<tr></tr> linha
+<td></td> célula de conteudo
+<th></th> célula de título
+<colgroup></colgroup> eu uso pra defininir minhas colunas baseadas no th.
+<col class="nome da th" span="quanto vai expandir"> aqui eu informo o nome do th que eu quero definir como coluna
+scope="col" ou "colgroup" no th informa que o conteudo apontado por aquela célula de título virá na ordem de coluna
+scope="row" ou "rowgroup" no th informa que o conteudo apontado por aquela célula de título virá na ordem de linha
+colspan="2" no th ou no th faz a célula ocupar duas colunas, ou seja expansão horizontal
+rowspan="2" no th ou no th faz a célula ocupar duas linhas, ou seja expansão vertical
+"overflow:" tem o poder de criar uma barra dentro do container da tebela quando ela excede o tamanho da tela
+
+
+                                                        CONFIGURAÇÕES
+* dentro da tag css, significa que o que virá a seguir, será aplicado para toda a página
+# significa que eu estou aplicando as alterações a algum id 
+. significa que eu estou aplicando as alterações a alguma class
+							
+
+							                                PROJETO
+PARA CRIAR LAYOUTS DE PROJETOS
+https://wireframepro.mockflow.com/#/space/MeWYqHJesnb
+

@@ -1,0 +1,119 @@
+TAGS html
+<!DOCTYPE html> eu sempre devo espeficicar o doctype do meu html
+<p></p> serve para fazer um parágrafo
+<b></b> deixa um texto em negrito
+<strong></strong> visualmente, igual a <b></b>, mas para leitores de dela, ela terá um importancia semantica maior
+<i></i> deixa o texto em itálico
+<em></em> dá enfase. também deixando o texto em itálico
+<body></body>  = O elemento <body> do HTML representa o conteúdo de um documento HTML. è permitido apenas um <body> por documento
+<h1></h1> é um cabeçalho que vai até o h6 e serve pra definir a hierarquia do conteudo
+<title></title> é o nome da página
+<span> escreve ignorando a quebra de linha
+<br> quebra a linhaa
+<style></style> serve pra chamar o css
+
+LINKS
+<a href=""></a> é uma referencia, ou um link, que muda vc de página. 
+Também funciona para links internos, como por exemplo, um outro html do seu projeto
+<link href=""> com essa tag eu posso abrir um link, por exemplo pra criar um favcon
+
+<del></del> risca a palavra / semântica de exclusão
+<ins></ins> sublinha a palavra / semântica de inserção
+<s></s> só risca
+<u></u> só sublinha
+<small></small> da uma diminuidinha no texto
+<sup></sup> serve pra mostar um "elevado" 2² desse jeito. eu colocaria 2<sup>2</sup>
+<sub></sub> serve pra rebaixar algum valor. H20 por exemplo: H<sub>2</sub>O
+
+CITAÇÕES
+<q></q> cria uma citação semântica
+<blockquote></blockquote> criar um bloco fora do parágrafo. Um bloco de citação
+
+<hr> cria uma linha horizontal, tipo uma linha mesmo
+<code></code> para especificar um código
+<pre></pre> essa tag respeita a formatação que eu colocar no texto
+<span></span> um container genérico que serve para alterar algo no texto, mas sem dar peso semântico
+<div></div> div é um container genérico para criar uma nova seção
+
+LISTAS
+<ol></ol> com cria uma lista ordenada /// ol também recebe um type, que pode mudar caracter que ordena a lista
+<ul></ul> com cria uma lista sem ordem
+<li></li> indica os itens na lista
+<dl></dl> cria uma lista de definição
+<dd></dd> Acrescenta um termo dentro da lista de definição
+<dt></dt> descreve um item da lista
+
+FORMULÁRIOS
+<form method="POST ou GET" action="/ponto final do site"></form> = essa tag cria um formulário
+POST apenas coleta, enquanto GET espera ainda usar aqules dados em seguida
+As requisições do tipo GET são recomendadas para obter dados de um determinado recurso. Como em um formulário de busca ou em uma listagem de todos os produtos cadastrados.
+Já as requisições POST são mais utilizadas para para enviar informações para serem processadas, como por exemplo, criar algum recurso, como um produto, ou um cliente.
+o GET tem um tamanho máximo de dados que podem ser enviados, que no geral é de 255 caracteres. Com POST, podemos enviar informações um pouco maiores, como imagens.
+<input> = essa tag cria um input para o usuário
+Tipos de inputs
+<input type="submit"> = cria um botão de envio
+<input type="password"> = cria um espaço pra senha com ****
+<input type="text"> = cria um espaço pra texto]
+<input type="checkbox" value="sempre informar um value para poder diferenciar"> = cria um checkbox
+<input type="radio" name="nome igual" value="valores diferentes"> = deve ser chamado mais de uma vez, pra criar uma checkbox que se vc selecionar 1, o outro desmarca
+<input type="reset" value="limpar"> = cria um botão que limpa os campos preenchidos
+<select name="nome da dropbox" size="quantos iten serão mostrados por ver"></select> = cria uma lista suspensa
+<option value="opçao da box"></option> = cria as opções da box
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<input type="date" name="data"> = cria uma caixa pra selecionar data
+<input type="file" name="" > = envia um arquivo
+<input type="email" name=""> = cria uma caixa pra email e ainda faz uma pequena validação
+"selected" dentro da option faz ela ja vir setada quando atualiza a página
+"multiple" dentro do select faz vc pode escolher mais de uma opção
+
+
+<header></header> aqui é um local onde eu guardo o cabeçalho macro da minha página
+<section></section> cria uma nova seção semânticamente
+<article></article> Cria um artigo, semânticamente
+<footer></footer> cria um rodapé
+<aside></aside> indica que será uma barra lateral
+<nav></nav> indica que será um local de navegação
+<mark></mark> cria literalmente um marca texto amarelo na palavra
+<abbr title=""></abbr> Cria uma caixinha de texto flutuante em cima de alguma palavra
+<bdo dir=""></bdo> inverte a ordem do texto
+
+IMAGENS
+<picture></picture> Dentro dessa tag, eu posso abrir tags como 
+<source media="(max-width: 750px)" 
+srcset="IMAGENS/foto-p.png"
+type="image/png">, 
+e dentro desta, eu posso fazer automatizar a exibição de imagens de tamanhos variados
+<img src="" alt=""> serve para linkar imagens
+
+AUDIO
+<audio controls src=""></audio> essa é a tag que eu uso pra colocar um audio no site
+o atributo preload="metadata" é muito importante, porque sem ele, o site só carrega depois do arquivo em audio ter sido baixado
+
+VIDEO
+<video width="300" controls poster="IMAGENS/medievo.jpg"> mesmo esquema do áudio
+    <source src="MEDIA/War.mp4"  type="video/mp4">
+</video>
+O mais interessante é ir no youtube, na aba de compartilhamento, e copiar o código do Incorporar
+ 
+
+ATRIBUTOS 
+name="viewport" content="width=device-width, initial-scale=1.0"> essa tag de view port é pra dispositivos móveis. pra encaixar a página no tamanho da tela certinho
+lang="pt-BR" é um atributo que eu sempre tenho que chamar dentro do meu <html></html>
+id= "ident" é um identificador daquela tag, que serve pra tornar ela unica
+class= "grupo" é um identificador de grupo para aquela tag
+# serve para especificar um ID dentro do css
+. serve pra especificar uma CLASS dentro do css
+* seleciona tudo no css
+style="" chama o css dentro de alguma tag do html, e ele é exclusivo daquela tag
+target="_blank" abre o link em outra guia
+width="" define a largura de uma imagem
+height="" define a altura de uma imagem
+alt="" descrição de uma imagem
+src="" link de uma imagem
+cite="" informa o referencia da citação
+
+OBSERVAÇÕES
+Para mexer num estilo, por exemplo, no de h1 dentro do style, eu devo especificar onde eu to mexendo
+caso fale só h1, ele vai mexer só no h1
+
+display "block" significa que a tag ocupa toda a largura da tela
