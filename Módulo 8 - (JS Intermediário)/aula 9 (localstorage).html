@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+       // localStorage.setItem("chave", "valor") armazena algo na memoria do navegador
+       // localStorage.getItem("chave") busca algo da memoria do navegador
+       // localStorage.removeItem("chave") remove algo da memoria do navegador
+
+       window.onload = function() {
+           valor = localStorage.getItem("valor")
+           let h1 = document.getElementById("titulo")
+           h1.innerHTML = valor
+
+       }
+        function mudah1(x) {
+            let valor = x.value
+            console.log(valor)
+            let h1 = document.getElementById("titulo")
+            h1.innerHTML = valor
+            localStorage.setItem("valor", valor) 
+
+        }
+
+        let a = {
+            nome:"Pedro",
+            idade:18,
+        }
+
+
+        // localStorage.setItem("alunxpedro", JSON.stringify(a))
+        let x = localStorage.getItem("alunxpedro")
+        console.log(x)
+        console.log(JSON.parse(x))
+
+        // localStorage.clear() apaga tudo na memoria
+        
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1 id="titulo">
+    </h1>
+    <input type="text" oninput="mudah1(this)" >
+</body>
+
+</html>

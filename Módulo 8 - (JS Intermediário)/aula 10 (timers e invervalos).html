@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers e intervalos</title>
+    <script>
+
+        /*
+        function mudar_cor(){
+            let h = document.getElementsByTagName("h1")[0]
+            h.style.color = "red"
+        }
+
+        function mudar_texto() {
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML = "Novo texto"
+
+            window.setTimeout(mudar_cor, 3000)
+
+        }
+        */
+        var a = 0
+        var interval
+        
+        function att_texto() {
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML = h.innerHTML + " " + a
+            a += 1
+        }
+        function iniciar() {
+            interval = window.setInterval(att_texto, 500)
+        }
+
+        function parar() {
+            window.clearInterval(interval)
+        }
+
+    </script>
+</head>
+<body>
+    <h1>
+        CONTADOR: 
+    </h1>
+    <button onclick="iniciar()">
+        INICIAR
+    </button>
+    <button onclick="parar()">
+        PARAR
+    </button>
+</body>
+</html>

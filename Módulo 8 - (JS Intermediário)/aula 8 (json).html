@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        let a = {
+            nome:"Samuel",
+            idade:18
+        }
+        let b = JSON.stringify(a) // transforma um objeto em string
+        console.log(b)
+
+        let a1 = '{"nome":"samueee", "idade":18}' // parse transforma uma string em um objeto, mas ela deve estar entre aspas simples, com os valore e chaves em aspas duplas
+        let b1 = JSON.parse(a1)
+        console.log(b1)
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1 id="titulo">
+        TESTE
+    </h1>
+</body>
+
+</html>

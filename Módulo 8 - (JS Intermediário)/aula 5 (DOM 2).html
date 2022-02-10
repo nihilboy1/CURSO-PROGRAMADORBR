@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+    <script>
+        function carregado() {
+            var x = document.getElementById('titulo')
+            x.addEventListener("click", ficared)
+
+            // x.onclick = ficared
+        }
+         /*
+         Usando do x.onclick, o evento do html, o meu self/this vai ser o window
+         No entanto, com o x.addEventListener(), o meu self/this será o próprio elemento
+         */
+
+         /*
+         Além disso, o x.addEventListener() tem um "parâmetro secreto" no meio da execução da função, que é a classe que herda para o método/evento utilizado
+         */
+
+        function ficared() {
+            this.style.color = 'red'
+        }
+    </script>
+</head>
+
+<body onload="carregado()">
+
+    <h1 id="titulo">
+        TESTE
+    </h1>
+</body>
+
+</html>

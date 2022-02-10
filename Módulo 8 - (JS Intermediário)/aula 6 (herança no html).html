@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança HTML</title>
+    <script>
+        window.onload = function() {
+            /*
+            let d1 = document.getElementById("d1")
+            let filho = d1.children[0] // pega o filho mais próximo
+            let pai = filho.parentElement // pega o pai do elemento
+            console.log(pai)
+            console.log(filho)
+            */
+            let h1 = document.getElementsByTagName("h1")
+
+            for (let x of h1) {
+                console.log(x)
+
+                x.addEventListener("click", qual_o_pai)
+            }
+
+            function qual_o_pai(evento){
+                let alvo = evento.target
+                console.log(alvo.parentElement)
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <h1>
+            Título 1
+        </h1>
+        <p>
+            Paragrafo 1
+        </p>
+    </div>
+    <div id="d2">
+        <h1>
+            Título 2
+        </h1>
+        <p>
+            Paragrafo 2
+        </p>
+    </div>
+    
+</body>
+</html>
