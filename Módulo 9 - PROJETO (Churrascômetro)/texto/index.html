@@ -11,12 +11,12 @@
     <script src="../script/código.js"></script>
     <div id="div1">
         <h1>Churrascômetro</h1>
-        <input type="number" name="adultos" placeholder="Adultos" value="">
-        <input type="number" name="crianças" placeholder="Crianças">
-        <input type="number" name="duração" placeholder="Duração">
-        <button onclick="coletar_dados()">Calcular</button>
+        <input type="number" name="adultos" id="adultos" placeholder="Adultos">
+        <input type="number" name="criancas" id="criancas" placeholder="Crianças">
+        <input type="number" name="duracao" id="duracao" placeholder="Duração (h)">
+        <button onclick="coletar()">Calcular</button>
     </div>
-    <div>
+    <div id="resultado">
 
     </div>
 </body>
