@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-content:center;
+            background-color: darkgray;
+            height: 400px;
+            color: white
+        }
+
+        .r1 {
+            flex-grow: 1.2;
+            background-color: red;
+        }
+
+        .r2 {
+            flex-grow: 1.2;
+            background-color: blue;
+        }
+
+        .r3 {
+            flex-grow: 2;
+            order: -1;
+            background-color: green;
+        }
+
+        .rect {
+            width: 50px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+    </div>
+    <section>
+        <h1>flex-shrink</h1>
+        <p>
+            flex-shrink: 0; declara que aquele elemento não pode encolher para se ajustar a tela <br>
+            flex-shrink: 1; declara que aquele elemento PODE encolher para se ajustar a tela
+        </p>
+        <h1>grow</h1>
+        <p>
+            flex-grow: recebe valores numericos, e declara o quanto aquele elemento vai poder crescer quando a tela for aumentada
+        </p>
+        <h1>order:</h1>
+        <p>
+            order: recebe valores numericos e serve pra alterar a ordem de apresentação das caixas. todos os elementos tem por padrão o valor 0, então 1 ou -1 ja fazem ele andar pro lado
+        </p>
+    </section>
+  
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: red;
+        }
+
+        .container {
+            width: 100%;
+            background-color: blue;
+        }
+
+        .primeira {
+            display: inline-block;
+            margin-right: -4px;
+            margin-bottom: -4px;
+            width: (calc(100% - 300px));
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .segunda {
+            margin-right: -4px;
+            margin-bottom: -4px;
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="primeira"></div>
+        <div class="segunda"></div>
+    </div>
+    
+</body>
+</html>
+
+width: (calc(100% - 300px)); é o valor total da tela, menos uma quantidade x de pixels.

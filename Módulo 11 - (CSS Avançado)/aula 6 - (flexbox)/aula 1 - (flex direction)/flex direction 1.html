@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX BOX</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: co;
+            background-color: darkgray;
+            height: 400px;
+            color: white
+        }
+
+        .r1 {
+            background-color: red;
+        }
+
+        .r2 {
+            background-color: blue;
+        }
+
+        .r3 {
+            background-color: green;
+        }
+
+        .rect {
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+    </div>
+    <p>
+        O "display: flex;" meio que transforma o container numa tabela, liberando a propriedade
+        "flex-direction: row (ou column);"" a row faz as caixas filhas do container ocuparem 100% da altura do pai e apenas a largura necessaria,
+        enquanto o column faz o contrário.
+    </p>
+    <p>
+        É importante lembrar que o display flex aplicado no container também afeta os filhos, fazendo todos eles herdarem a mesma propriedade flexivel
+    </p>
+    <p>
+        Também existem mais duas opções para "flex-direction", que são: "row-reverse" e "column-reverse", que fazem os elementos terem seu ponto de partida do lado direito da tela, e não do esquerdo, como é o padrão.
+    </p>
+</body>
+</html>
