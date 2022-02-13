@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #142446;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(ITENS/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 290px;
+    height: 440px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+#header {
+    height: 33%;
+}
+
+#headerimg {
+    width: 100%;
+}
+
+#headerimg, #container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+#summary {
+    margin-top: 10px;
+    font-size: 21px;
+}
+
+#description {
+    color: grey;
+    display: flex;
+    align-self: center;
+    width: 85%;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+#resume {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F9FE;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 15%;
+}
+
+#resume > a {
+    color:#65559c;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+#resumeimg {
+    width: 15%;
+}
+
+#texto2 {
+    font-size: 12px;
+    width: 50%;
+}
+
+#texto2 > #anual {
+    font-weight: bold;
+    line-height: 20px;
+}
+#texto2 > #price {
+    line-height: 20px;
+    color: grey;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.btn > #proceed {
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    background-color: #382AE1;
+    height: 80%;
+    width: 80%;
+    box-shadow: -1px 15px 15px #cccce4;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn > #cancel {
+    color: grey;
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration:none;
+}
