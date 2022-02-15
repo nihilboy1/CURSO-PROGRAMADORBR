@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID LAYOUT</title>
+    <style>
+
+        .container {
+            color: white;
+            display: grid;
+            grid-template-rows:auto auto auto ;
+            grid-template-columns: 1.2fr 0.3fr 1fr;
+            gap: 20px 15px;
+            
+        }
+        .r1 {
+            background-color: red;
+        }
+        .r2 {
+            background-color: blue;
+        }
+
+        .r3 {
+            background-color: green;
+        }
+        .rect {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+        <div class="rect r1">4</div>
+        <div class="rect r2">5</div>
+        <div class="rect r3">6</div>
+    </div>
+    <section>
+        <h1>
+            display: grid;
+        </h1>
+        <p>
+            define que eu estou usando grid layout
+        </p>
+        <h1>
+            grid-template-columns:
+        </h1>
+        <p>
+            recebe valores numericos, em %, px e fr. também pode receber auto. <br>
+            essa propriedade define a dimensão das minhas colunas
+        </p>
+        <h1>
+            grid-template-rows
+        </h1>
+        <p>
+            recebe valores numericos, em %, px e fr. também pode receber auto. <br>
+            essa propriedade define a dimensão das minhas linhas
+        </p>
+        <h1>
+            grid-template:
+        </h1>
+        <p>
+            esse short-hand do grid recebe primeiro as linhas e depois as colunas
+        </p>
+        <h1>
+            gap:
+        </h1>
+        <p>
+            define uma distancia entre as boxes, recebendo primeiro o valor para as rows e depois para as columns
+        </p>
+    </section>
+</body>
+</html>

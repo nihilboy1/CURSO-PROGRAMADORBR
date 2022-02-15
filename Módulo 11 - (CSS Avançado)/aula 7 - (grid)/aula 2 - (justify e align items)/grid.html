@@ -8,10 +8,15 @@
     <style>
 
         .container {
+            border: 1px solid black;
             color: white;
+            background-color: rgb(112, 112, 112);
+            height: 500px;
             display: grid;
-            grid-template-columns: ;
-            grid-template-rows: ;
+            grid-template: auto auto auto auto auto/ auto auto auto;
+            justify-items: flex-start;
+            align-items: flex-start;
+            
         }
         .r1 {
             background-color: red;
@@ -23,8 +28,9 @@
         .r3 {
             background-color: green;
         }
-        .rect {
 
+        .rect {
+            border: 1px solid black;
         }
 
     </style>
@@ -38,5 +44,19 @@
         <div class="rect r2">5</div>
         <div class="rect r3">6</div>
     </div>
+    <section>
+        <h1>
+            justify-items:
+        </h1>
+        <p>
+            alinha horizontalmente dentro do espaço da grid
+        </p>
+        <h1>
+            align-items:
+        </h1>
+        <p>
+            alinha verticalmente dentro do espaço da grid
+        </p>
+    </section>
 </body>
 </html>

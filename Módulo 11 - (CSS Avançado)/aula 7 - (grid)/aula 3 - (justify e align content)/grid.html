@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID LAYOUT</title>
+    <style>
+
+        .container {
+            border: 1px solid black;
+            color: white;
+            background-color: rgb(112, 112, 112);
+            height: 500px;
+            display: grid;
+            grid-template: auto auto/ auto auto auto;
+            justify-items: center;
+            align-items: center;
+            justify-content:space-between;
+            align-content: space-around;
+            
+        }
+        .r1 {
+            background-color: red;
+        }
+        .r2 {
+            background-color: blue;
+        }
+
+        .r3 {
+            background-color: green;
+        }
+
+        .rect {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect r1">1</div>
+        <div class="rect r2">2</div>
+        <div class="rect r3">3</div>
+        <div class="rect r1">4</div>
+        <div class="rect r2">5</div>
+        <div class="rect r3">6</div>
+    </div>
+    <section>
+        <h1>
+            justify-content:
+        </h1>
+        <p>
+            altera o espaçamento da grid horizontalmente. <br>
+            recebe flex-end, flex-start, center,space-around, space-between e space-evenly;
+        </p>
+        <h1>
+            align-content:
+        </h1>
+        <p>
+            altera o espaçamento da grid horizontalmente. <br>
+            recebe flex-end, flex-start, center,space-around, space-between e space-evenly;
+        </p>
+    </section>
+</body>
+</html>
