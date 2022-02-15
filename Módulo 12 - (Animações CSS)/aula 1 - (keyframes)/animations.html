@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+    <style>
+        @keyframes changecolor {
+            /*
+            from {background-color: red;}
+            to {background-color: blue;}
+            */
+            0% {background-color: green; width: 20%;}
+            25% {background-color: red; width: 250px; height: 560px;}
+            80% {background-color: purple; width: 500px;}
+            100% {background-color: aqua;}
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            animation-name: changecolor;
+            animation-duration: 5s;
+            /* animation-delay: 5s; */ 
+            animation-iteration-count: infinite; /* recebe valores em int e também "infinite"*/ 
+            animation-direction: alternate; /* liga o modo aleatório se o animation-iteration-count: estiver ligado*/ 
+            animation-fill-mode: both; /* faz a animação começar no primeiro quadro e terminar no ultimo, sem vir pra telinha branca. também recebe forwards e backwards, que fazem a mesma coisa, mas individualmente*/ 
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
