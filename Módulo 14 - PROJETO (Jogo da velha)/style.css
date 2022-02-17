@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.274);
+}
+.stage {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 100px;
+    width: 30%;
+    height: 520px;
+}
+.quad {
+    margin: 1px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    background-color: rgb(119, 119, 105);
+}
+
+.shield {
+    position: relative;
+}
+.shield::after {
+    position: absolute;
+    content: "\2B55";
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.sword {
+    position: relative;
+}
+.sword::after {
+    position: absolute;
+    content: "\274C";
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
