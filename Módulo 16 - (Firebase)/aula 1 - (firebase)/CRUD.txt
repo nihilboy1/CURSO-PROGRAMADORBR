@@ -1,0 +1,87 @@
+
+// UPDATE ARRAYS E DELETE DE CAMPOS E DOCUMENTOS
+/*
+db.collection(TURMA).doc("hDaJJUUrJnY5U4CjaH9t").update({ // se eu passar delete() no lugar do update, e mais nada dentro dele, ele vai apagar o documento inteiro
+  faltas: firebase.firestore.FieldValue.increment(3), // esse daqui soma um valor a um campo previo. Se eu pasar .delete() no lugar do increment, ele apaga o campo.
+  nome:"maria",
+  jogos: firebase.firestore.FieldValue.arrayUnion("Dota", "Lol") // eu posso usar arrayRemove para apagar algum campo deo array
+}).then((doc) => {
+  console.log("Efetuado!")
+}).catch((error) => {
+  console.log(error)
+})
+*/
+
+// MÉTODO ADD PARA ADICIONAR ELEMENTOS
+/*
+db.collection(TURMA).add(
+  {
+   nome:"Samuel",
+   sobrenome: "Severiano",
+   notas: {
+     nota_1: 8.5, nota_2:6.6
+   },
+  }
+  ).then((doc) => {
+    console.log("Registro efetuado! \n", doc)
+  }).catch((error) => {
+    console.log(error)
+  })
+*/
+
+// SET E UPDATE
+/*
+db.collection(TURMA).doc("id1").set( // e usando aqui o método .update, eu posso tirar o merge lá de baixo, pq ele vai ir só atrás do que precisa ser alterado
+  {
+   nome:"Luiz",
+   sobrenome: "Ricardo",
+   peso: 49,
+   altura: 1.85,
+  }, {merge: true} // passando esse objeto de merge como true depois do bloco do meu objeto que eu quero introduzir, ele mescla o que ja tem lá com o que eu to mandando aqui
+
+  ).then((doc) => {
+    console.log("Registro efetuado! \n", doc)
+  }).catch((error) => {
+    console.log(error)
+  })
+*/
+
+// LENDO TODAS AS COLLECTIONS
+/*
+db.collection("turmaA").get().then((snapshot) => {
+    snapshot.forEach((doc) => {
+      let data = doc.data()
+      let nome = data.nome
+      console.log(nome)
+    })
+})
+*/
+
+// LER UMA UNICA COLLECTION
+/*
+let doc_ref = db.collection("turmaA").doc("RsDyeXcEiaabXI7AvDKS")
+doc_ref.get().then((doc) => {
+    console.log(doc.data())
+})
+*/
+
+// PESQUISA ESPECIFICA DENTRO DA COLLECTION
+/*
+// ele aceita todos os simbolos lógicos, menos !=
+// é possivel colocar um where depois do outro, caso eu esteja fazendo uma busca no mesmo campo
+db.collection("turmaA").where("nome", "==", "jose").get().then((snapshot) => {snapshot.forEach((doc) => {
+  let pessoa = doc.data()
+  console.log(pessoa)
+  console.log(pessoa.peso)
+  
+})
+}
+*/
+
+// ONSNAPSHOT
+/*
+db.collection(TURMA).doc("hDaJJUUrJnY5U4CjaH9t").onSnapshot((doc) => {
+  console.log(doc.data())
+})
+*/
+
