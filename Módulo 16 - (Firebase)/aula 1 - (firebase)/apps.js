@@ -12,6 +12,8 @@ firebase.initializeApp(firebaseConfig);
 const DB = firebase.firestore()
 const AUTH = firebase.auth()
 
+
+/*
 // CRIAR USUÁRIOS COM EMAIL E SENHA PADRÃO
 function criar_user(email, senha){
     AUTH.createUserWithEmailAndPassword(email, senha).then((user) => {
@@ -20,7 +22,7 @@ function criar_user(email, senha){
       console.log(error)
     })
 }
-
+*/
 
 
 // CHECAR USUÁRIOS LOGADOS
