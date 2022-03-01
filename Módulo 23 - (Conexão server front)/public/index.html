@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io("http://localhost:5000")
+        socket.on("1", (data) => {
+            console.log(data.msg)
+            socket.emit("2", {msg:"Frontend: Ta tudo certo, meu mano..."})
+        })
+    </script>
+</body>
+</html>
