@@ -1,0 +1,16 @@
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 25px;
+  list-style: none;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+  
+}
+
+.menu li:hover {
+  color: rgb(84, 84, 150);
+  font-weight: bold;
+}

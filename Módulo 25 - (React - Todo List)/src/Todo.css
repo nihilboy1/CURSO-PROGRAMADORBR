@@ -1,0 +1,71 @@
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+.done > div > .donebtt {
+  color: rebeccapurple;
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.donebtt {
+  min-width: 45px;
+  margin: 2px;
+}
+
+.item {
+  padding: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.329);
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addbutton {
+  width: 50px;
+  height: 50x;
+  font-size: 20px;
+  border: none;
+  background-color: skyblue;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(95, 158, 160, 0.226);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidemodal {
+  display: none;
+}
+
+.cardmodal {
+  padding: 20px;
+  background-color: white;
+}

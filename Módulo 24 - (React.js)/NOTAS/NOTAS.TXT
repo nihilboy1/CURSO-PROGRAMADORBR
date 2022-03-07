@@ -1,0 +1,85 @@
+
+@PROPS
+A props são passadas como atributos para o componente
+PROPS SÃO A CONFIGURAÇÃO INICIAL DE UM COMPONTENTE, ENQUANTO OS ESTADOS, É COMO ELE ESTÁ NAQUELE MOMENTO
+
+
+
+
+
+
+@STATE
+O STATE É UM TIPO DE VARIAVEL ESPECIAL DO REACT, QUE TODA VEZ QUE ELA É ATUALIZADA, E SE ELA ESTIVER SENDO MOSTRADA NA TELA, AQUELE ELEMENTO CORRESPONDENTE VAI SER ATUALIZADO
+ALÉM DISSO, NENHUM ESTADO PODE SER MUDADO DIRETAMENTE, PRA ISSO UTILIZAMOS O SETSTATE
+
+ISSO SIGNIFICA QUE TODA A LÓGICA DE MODIFICAÇÃO DA TELA, DENTRO DO REACT, FEITA ATRAVÉS DE UM INPUT DO USUÁRIO, VAI SER FEITA ATRA´VES DA MODIFICAÇÃO DO ESTADO DO COMPONENTE.
+
+
+
+
+
+@CICLO DE VIDA
+CICLO DE VIDA DO COMPONENTE
+1 - Construtor
+2 - Render (É executado sempre que há uma alteração no componente, do estado ou das props)
+
+
+
+
+
+
+
+
+@atualizar ou não o componente
+shouldComponentUpdate(){
+  return false
+}
+O COMPONENTE QUE RECEBER ESSA FUNÇÃO COM ESSE ESTADO EM FALSE NÃO SERÁ ATUALIZADO
+
+
+
+
+
+
+
+
+
+@fazer algo quando o componente for montado
+componentDidMount(){
+
+}
+ESSA FUNÇÃO FAZ ALGO DEPOIS QUE O COMPONENTE NO QUAL ELA FOI CHAMADA FOR MONTADO
+
+
+
+
+
+
+@fazer algo quando o componente for atualizado
+componentDidUpdate(){
+
+}
+ESSA FUNÇÃO FAZ ALGO DEPOIS QUE O COMPONENTE NO QUAL ELA FOI CHAMADA FOR ATUALIZADO
+
+
+
+
+
+
+
+
+
+
+@fazer algo quando o componente for desmontado
+componentWillUnmount(){}
+ESSA FUNÇÃO FAZ ALGO DEPOIS QUE O COMPONENTE NO QUAL ELA FOI CHAMADA FOR DESMONTADO
+
+
+
+
+
+
+@hooks
+useState() é um hook pro estado. uma função pré pronta que ja cria um meio caminho pra eu trabalhar com estados
+
+useEffect() é um hook pro ciclo de vida. uma função que faz algo quando o componente for montado e também quando ele for atualizado. Esse hook se baseia em ficar de olho em uma variavel e executar o que está dentro dele quando essa variavel mudar. Pra isso, a gente passa um array com essa variavel dentro no final dele, pra ele ficar de olho. Contudo, se eu não quiser que ele fique sendo executado a cada mudança da minha variavel, eu passo esse array vazio, dai ele só vai executar uma vez. E se eu quiser que ele execute quando QUALQUER estado for mudado, eu deixo sem o array.
