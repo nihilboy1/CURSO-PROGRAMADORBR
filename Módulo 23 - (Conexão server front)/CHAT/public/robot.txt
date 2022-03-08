@@ -1,0 +1,8 @@
+User-agent: Googlebot // impede que o robo do conteudo do google ache alguma parte do meu site
+User-agent: Googlebot-image // impede que o robo do imagem do google ache alguma parte do meu site
+User-agent: * // bloqueia em todos os navegadores
+
+
+
+Disallow: serve pra informar o que vc n quer que seja mostrado
+Allow: informa a excessão no que foi restringido para o robo
