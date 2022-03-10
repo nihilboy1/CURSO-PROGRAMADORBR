@@ -1,0 +1,16 @@
+*{
+  border: 1px solid black;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
